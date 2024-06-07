@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.todoItem{
+  width: 300px;
+  height: 50px;
+  border: 1px solid lightblue;
+  
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
