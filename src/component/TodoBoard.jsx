@@ -6,7 +6,8 @@ function TodoBoard(props){
 
     return (
         <div>
-            <h1>Todo List!!!</h1>
+            <h1 className="text-3xl">Todo List!!!</h1>
+            <div className="mt-10 ">
            {
             props.todoList.map((item, index)=>{
                 console.log("todoBoard in todoItem");
@@ -17,6 +18,7 @@ function TodoBoard(props){
                 
             })
            } 
+           </div>
         </div>
     )
 }

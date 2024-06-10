@@ -17,6 +17,10 @@ const addItem = ()=>{
     [...todoList, inputValue]
   )
   console.log("todoList", todoList)
+  // 입력후 텍스트 비우기, 포커스 맞추기
+  setInputValue("");
+  document.getElementById('todoListItemBox').focus();
+  
 }
 
 const onRemove = (index) =>{
@@ -28,11 +32,11 @@ const onRemove = (index) =>{
 
 
   return (
-    <div className="App">
-      <input type='text'value={inputValue} onChange={(e)=>{
+    <div className="App m-10 border-solid-cyan-400">
+      <input id="todoListItemBox" className="h-10 w-80 p-5 border-solid border-2 border-indigo-600 rounded outline-none" type='text' border-solid-cyan-400 value={inputValue} onChange={(e)=>{
         setInputValue(e.target.value) 
       }}/>
-      <button onClick={addItem}>add</button>
+      <button className='m-5 w-20 h-10 bg-cyan-100' onClick={addItem}>add</button>
 
       <TodoBoard todoList={todoList} onRemove={onRemove}/>
     </div>
